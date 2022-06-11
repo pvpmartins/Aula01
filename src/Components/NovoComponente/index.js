@@ -1,6 +1,8 @@
 const NovoComponente = ({nome}) => {
     return (
+        <>
         <li>{nome}</li>
+        </>
     )
 }
 
