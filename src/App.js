@@ -5,10 +5,12 @@ import Cadastro from './Components/Cadastro';
 
 function App() {
   return (
-    <div className="App">
-      <Cadastro/>
-      <Listas/>
-    </div>
+    <>
+      <div className="App">
+        <Cadastro />
+        <Listas />
+      </div>
+    </>
   );
 }
 
