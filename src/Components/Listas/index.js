@@ -8,7 +8,13 @@ const Listas = () => {
 
     const adicionarFruta = () => {
         setFrutas([...frutas, novaFruta])
-        setNovaFruta("")
+    }
+
+    const [index, setIndex] = useState()
+
+    const removerFruta = (index) => {
+        const newArr = frutas.slice((index-1),1)
+        setFrutas(newArr)
     }
 
     return (
@@ -27,7 +33,8 @@ const Listas = () => {
             </ul>
             <input type="text" value={novaFruta} onChange={(e)=>setNovaFruta(e.target.value)} />
             <button type="button" onClick={adicionarFruta}>Adicionar fruta!</button>
-
+            <input type="text" name="" id="" onChange={(e) => setIndex(e.target.value)}/>
+            <button type="button" onClick={()=> removerFruta(index)}>Remover Fruta</button>
 
         </>
         

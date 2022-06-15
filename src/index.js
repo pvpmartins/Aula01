@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Routes, Route, Navigate  } from 'react-router-dom'
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Aulas from './pages/Aulas';
+import Exercicios from './pages/Exercicios';
+import Exibir from './pages/Exibir';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='*' element={<Navigate to='/'/>}/>
+        <Route path='/aulas' element={<Aulas/>}/>
+        <Route path='/exercicios' element={<Exercicios/>}/>
+        <Route path='/exibir' element={<Exibir></Exibir>}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
